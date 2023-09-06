@@ -1,0 +1,18 @@
+@font-face{
+    font-family: estilosdeletras;
+    src: url(OPTISantita.otf);
+}
+
+.estiloAbout{
+    background-color: rgb(237, 183, 183);
+    border-radius: 2px;  
+    font-family: estilosdeletras;
+    border: 1.5px solid rgb(239, 252, 55);
+}
+
+.estiloHome{
+    background-color: rgb(201, 240, 160);
+    border-radius: 2px;  
+    font-family: estilosdeletras;
+    border: 1.5px solid rgb(55, 147, 252);
+}
