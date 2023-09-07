@@ -9,10 +9,16 @@ export default function SearchBar({onSearch}) {
       setId(event.target.value)
    }
 
+   const search = () => {
+      onSearch(id)
+      setId('')
+   }
+
    return (
       <div className={style.buscador}>
          <input type='search' onChange={handleChange} value={id} />
-         <button onClick={()=> {onSearch(id), setId('')}}>Agregar</button>
+         <button onClick={search}>Agregar</button>
+         {/* ()=> {onSearch(id), setId('')}  donde esta search se puede poner esta opcion*/}
       </div>
    );
 }

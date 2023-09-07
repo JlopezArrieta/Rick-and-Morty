@@ -1,0 +1,46 @@
+@font-face {
+    font-family: letraderick;
+    src: url(get_schwifty.ttf);
+}
+
+@font-face{
+    font-family: estilosdeletras;
+    src: url(OPTISantita.otf);
+}
+
+.num{
+    font-size: x-small;
+}
+.container {
+    background-color: rgb(171, 126, 126);
+    width: 10%;
+    margin: 50px auto;
+    padding: 0.2em;
+    line-height: 1.2em;
+    font-size: xx-small;
+    border-radius: 10px;
+    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 3px 4px 23px rgba(0, 0, 0, 0.6);
+    border: 2.5px solid rgb(95, 70, 98);
+}
+
+.estiloLetrasRick{
+    font-family: letraderick;
+    font-size:large;
+    color: rgb(51, 50, 112);
+}
+
+.estiloLetras{
+    font-family: estilosdeletras;
+    font-size: xx-small;
+}
+
+.imagenRick {
+    margin: auto;
+    padding: 0.2em;
+    border-radius: 20px;
+    margin: 0.1em;
+    border: 2.5px solid rgb(127, 72, 72);
+    width: 70%;
+    text-align: center;
+}
