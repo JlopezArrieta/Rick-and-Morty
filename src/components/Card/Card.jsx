@@ -31,9 +31,9 @@ function Card({ id, name, species, gender, image, onClose, addFav, removeFav, my
          {
             isFav ? 
             ( 
-            <button onClick={handleFavorite}>❤️</button>
+            <button className={style.corazonBotton} onClick={handleFavorite}>❤️</button>
             ) : (
-            <button onClick={handleFavorite}>🤍</button>
+            <button className={style.corazonBotton} onClick={handleFavorite}>🤍</button>
             )
          }
 {/* Otra forma de hacerlo */}

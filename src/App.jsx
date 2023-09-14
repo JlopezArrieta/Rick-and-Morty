@@ -9,7 +9,7 @@ import Detail from "./components/Detail/Detail";
 import Error from "./components/Error/Error";
 import Form from "./components/Form/Form";
 import Favorites from "./components/Favorites/Favorites";
-import validation from "./components/Form/validation";
+// import validation from "./components/Form/validation";
 
 
 
@@ -21,8 +21,10 @@ function App() {
   // console.log(location)
 
   const [access, setAccess] = useState(false);
+
   const EMAIL = 'jalop123@gmail.com';
   const PASSWORD = 'javier7';
+
   const navigate = useNavigate();
 
   //userData por destructuri = {email, password}
@@ -60,9 +62,13 @@ function App() {
     !access && navigate('/');
  }, [access]);
 
+ const handleLogOut = () => {
+  setAccess(false);
+}
+
   return (
     <div className="App" >
-      {pathname !== '/' && <Nav onSearch={onSearch} setAccess={setAccess} />}
+      {pathname !== '/' && <Nav onSearch={onSearch} handleLogOut={handleLogOut} />}
       <Routes>
         <Route path="/" element={<Form login={login} />}/>
         <Route path="/home" element={<Cards characters={characters} onClose={onClose} />} />

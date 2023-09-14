@@ -10,16 +10,17 @@
 }
 .container {
     background-color: rgb(135, 105, 105);
-    width: 10%;
-    margin:  50px auto;;
+    width: 11%;
+    margin:  10px auto;
     padding: 0.2em;
     line-height: 1.2em;
     font-size: xx-small;
     border-radius: 10px;
     margin-left: 1em;
     box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
-    box-shadow: 3px 4px 23px rgba(0, 0, 0, 0.6);
     border: 4px solid rgb(74, 57, 76);
+    /* text-align: center; */
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
 .num{
@@ -32,6 +33,13 @@
     width: 20px;
     border-radius: 5px;
     /* display: flex; */
+}
+
+.corazonBotton {
+    border: 0;
+    background-color: rgb(135, 105, 105);
+    border-radius: 5px;
+    display: flex;
 }
 
 .tamanoIgen {
