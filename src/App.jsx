@@ -17,7 +17,7 @@ function App() {
   const [characters, setCharacters] = useState([]);
 
   // const location = useLocation()
-  const {pathname} = useLocation()
+  const { pathname } = useLocation()
   // console.log(location)
 
   const [access, setAccess] = useState(false);
@@ -28,13 +28,13 @@ function App() {
   const navigate = useNavigate();
 
   //userData por destructuri = {email, password}
-  function login({email, password}) {
+  function login({ email, password }) {
     if (email === EMAIL && password === PASSWORD) {
-       setAccess(true);
-       navigate('/home');
+      setAccess(true);
+      navigate('/home');
     }
     else alert('Usuario o Contraseña Incorrecta')
- }
+  }
 
   const onSearch = (id) => {
     if (!id || isNaN(id)) return alert('Ingrese Un Id Valido');
@@ -60,17 +60,17 @@ function App() {
 
   useEffect(() => {
     !access && navigate('/');
- }, [access]);
+  }, [access]);
 
- const handleLogOut = () => {
-  setAccess(false);
-}
+  const handleLogOut = () => {
+    setAccess(false);
+  }
 
   return (
     <div className="App" >
       {pathname !== '/' && <Nav onSearch={onSearch} handleLogOut={handleLogOut} />}
       <Routes>
-        <Route path="/" element={<Form login={login} />}/>
+        <Route path="/" element={<Form login={login} />} />
         <Route path="/home" element={<Cards characters={characters} onClose={onClose} />} />
         <Route path="/about" element={<About />} />
         <Route path="/detail/:id" element={<Detail />} />

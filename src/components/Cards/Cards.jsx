@@ -5,7 +5,7 @@ export default function Cards({ characters, onClose }) {
   return (
     <div className={style.cartaHorizontal}>
       {characters.map(
-        ({ id, name, status, species, gender, origin, image}, index) => {
+        ({ id, name, status, species, gender, origin, image }, index) => {
           return (
             <Card
               key={index}
