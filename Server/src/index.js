@@ -1,17 +1,32 @@
-const http = require('http');
-const getCharById = require('./controllers/getCharById');
+const express = require('express');
+const server = express();
+const router = require('./routes/index');
+const morgan = require('morgan');
+const PORT = 3001;
 
+//middleware
+server.use(express.json());
+server.use(morgan('dev'));
 
-http.
-  createServer((req, res) => {
-    //esta linea lo que hace es darle permisos al front end para pedir cualquier peticion.
-    res.setHeader('Access-Control-Allow-Origin', '*');
+server.use((req, res, next) => {
+   res.header('Access-Control-Allow-Origin', '*');
+   res.header('Access-Control-Allow-Credentials', 'true');
+   res.header(
+      'Access-Control-Allow-Headers',
+      'Origin, X-Requested-With, Content-Type, Accept'
+   );
+   res.header(
+      'Access-Control-Allow-Methods',
+      'GET, POST, OPTIONS, PUT, DELETE'
+   );
+   next();
+});
 
-    if (req.url.includes("/rickandmorty/character")) {
-      const id = req.url.split('/').at(-1);
-      getCharById(res, id)
-  }
-  }).listen(3001)
+//middleware
+server.use('/rickandmorty', router);
 
+server.listen(PORT, () => {
+   console.log(`Server raised in port: ${PORT}`);
+});
 
 
