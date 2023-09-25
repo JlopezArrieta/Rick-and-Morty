@@ -7,7 +7,7 @@
     background-color: rgb(237, 183, 183);
     border-radius: 2px;  
     font-family: estilosdeletras;
-    border: 1.5px solid rgb(239, 252, 55);
+    border: 1.5px solid rgb(55, 147, 252);
 }
 
 .estiloHome{
@@ -15,4 +15,18 @@
     border-radius: 2px;  
     font-family: estilosdeletras;
     border: 1.5px solid rgb(55, 147, 252);
+}
+
+.estiloLogOut{
+    background-color: rgb(238, 227, 124);
+    border-radius: 2px;  
+    font-family: estilosdeletras;
+    border: 1.5px solid rgb(235, 52, 159);
+}
+
+.estiloFavorites{
+    background-color: rgb(99, 199, 238);
+    border-radius: 2px;  
+    font-family: estilosdeletras;
+    border: 1.5px solid rgb(83, 189, 38);
 }

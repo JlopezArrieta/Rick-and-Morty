@@ -1,16 +1,17 @@
 .divContainer {
     width: 100vw;
-    border: #f0340500 solid;
+    border: #57f70700 solid;
 }
 
 .loginStyle {
-    background-color: #93c78cbf;
+    background-color: #f209eabf;
     border-radius: 5px;
-    color: #3c0ce9bf;
+    color: #080808bf;
+    font-size: large;
 }
 
 .container {
-    background-color: #504e4dbf;
+    background-color: #68e9f7bf;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -18,8 +19,8 @@
     top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
-    padding: 2em;
-    border-radius: 5px;
+    padding: 0.5em;
+    border-radius: 50px;
 }
 
 .container label {
@@ -39,7 +40,7 @@
 
 .container .warning {
     border: solid red 2px;
-    border-radius: 0.4em;
+    border-radius: 0.5em;
 }
 
 .danger {
@@ -47,7 +48,7 @@
     color: #fffffecb;
     margin-top: 0.1em;
     font-weight: 600;
-    background-color: rgb(240, 12, 12);
+    background-color: rgb(234, 14, 14);
     padding: 0.5em;
-    border-radius: 5px;
+    border-radius: 0.5em;
 }

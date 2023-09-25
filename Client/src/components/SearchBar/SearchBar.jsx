@@ -1,5 +1,6 @@
 import style from "./SearchBar.module.css";
 import { useState } from 'react';
+import { NavLink } from "react-router-dom";
 
 
 export default function SearchBar({ onSearch }) {
@@ -24,8 +25,12 @@ export default function SearchBar({ onSearch }) {
   return (
     <div className={style.buscador}>
       <input type='search' onChange={handleChange} value={id} />
-      <button onClick={search}>Agregar</button>
-      <button onClick={random}>Aleatorio</button>
+      <button>
+      <NavLink className={style.estiloAgregar} onClick={search}>Agregar</NavLink>
+      </button>
+      <button>
+      <NavLink className={style.estiloAleatorio} onClick={random}>Aleatorio</NavLink>
+      </button>
       {/* ()=> {onSearch(id), setId('')}  donde esta search se puede poner esta opcion*/}
     </div>
   );

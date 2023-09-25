@@ -1,5 +1,6 @@
 import SearchBar from "../SearchBar/SearchBar";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
+import style from "./Nav.module.css";
 
 const Nav = ({ onSearch, handleLogOut }) => {
 
@@ -7,14 +8,16 @@ const Nav = ({ onSearch, handleLogOut }) => {
     <nav>
       <SearchBar onSearch={onSearch} />
       <button>
-        <NavLink to="/about">About</NavLink>
+        <NavLink className={style.estiloAbout} to="/about">About</NavLink>
       </button>
       <button>
-        <NavLink to="/home">Home</NavLink>
+        <NavLink className={style.estiloHome} to="/home">Home</NavLink>
       </button>
-      <button onClick={handleLogOut}>LogOut</button>
       <button>
-        <NavLink to="/Favorites">Favorites</NavLink>
+        <Link className={style.estiloLogOut} onClick={handleLogOut}>LogOut</Link>
+      </button>
+      <button>
+        <NavLink className={style.estiloFavorites} to="/Favorites">Favorites</NavLink>
       </button>
     </nav>
   )

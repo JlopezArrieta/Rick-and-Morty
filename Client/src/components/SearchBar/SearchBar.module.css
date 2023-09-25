@@ -1,6 +1,18 @@
 .buscador{
     display: flex;
     justify-content: center;
-    /* justify-content:flex-end; */
 }
 
+.estiloAgregar{
+    background-color: rgb(244, 98, 242);
+    border-radius: 2px;  
+    font-family: estilosdeletras;
+    border: 1.5px solid rgb(8, 117, 242);
+}
+
+.estiloAleatorio{
+    background-color: rgb(114, 245, 38);
+    border-radius: 2px;  
+    font-family: estilosdeletras;
+    border: 1.5px solid rgb(189, 46, 38);
+}
