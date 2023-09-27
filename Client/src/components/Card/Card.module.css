@@ -28,10 +28,11 @@
 }
 
 .closeBotton {
-    border: 0;
+    font-size: small;
+    border: 10px;
     background-color: rgb(188, 190, 190);
-    width: 20px;
-    border-radius: 100px;
+    width: 50px 50px 50px 50px;
+    border-radius: 10px;
 }
 
 .corazonBotton {

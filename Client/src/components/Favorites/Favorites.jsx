@@ -21,6 +21,7 @@ const Favorites = ({ myFavorites }) => {
 
   return (
     <div className={style.cartaHorizontal}>
+      <div>
       <select onChange={handleOrder}>
         <option className={style.estiloAscendente} value="A">Ascendente</option>
         <option className={style.estiloDescendente} value="D">Descendente</option>
@@ -33,6 +34,8 @@ const Favorites = ({ myFavorites }) => {
         <option className={style.estilounknown} value="unknown">unknown</option>
         <option className={style.estiloallcharactersFav} value="allcharactersFav">All charactersFav</option>
       </select>
+      </div>
+      <div className={style.card}>
       {
         myFavorites?.map(fav => {
           return (
@@ -44,10 +47,11 @@ const Favorites = ({ myFavorites }) => {
               gender={fav.gender}
               image={fav.image}
               onClose={fav.onClose}
-            />
+             />
           )
         })
       }
+      </div>
     </div>
   )
 }
@@ -61,4 +65,6 @@ const mapStateToProps = (state) => {
 export default connect(
   mapStateToProps, null
 )(Favorites);
+
+
 

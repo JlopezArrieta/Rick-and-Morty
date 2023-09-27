@@ -17,7 +17,7 @@ function App() {
   const [characters, setCharacters] = useState([]);
 
   // const location = useLocation()
-  const { pathname } = useLocation()
+  const { pathname } = useLocation();
   // console.log(location)
 
   const [access, setAccess] = useState(false);
@@ -27,32 +27,37 @@ function App() {
 
   const navigate = useNavigate();
 
-  const login = (userData) => {
-    const { email, password } = userData;
-    const URL = 'http://localhost:3001/rickandmorty/login/';
-    axios(URL + `?email=${email}&password=${password}`).then(({ data }) => {
+  const URL = 'http://localhost:3001/rickandmorty/login/';
+
+  const login = async (userData) => {
+    try {
+      const { email, password } = userData;
+      const { data } = await axios(URL + `?email=${email}&password=${password}`)
       const { access } = data;
       setAccess(access);
       access && navigate('/home');
-    });
+    }
+    catch (error) {
+      console.log(error.message)
+
+    }
   }
 
-  const onSearch = (id) => {
-    if (!id || isNaN(id)) return alert('Ingrese Un Id Valido');
-    if (characters.some(chart => chart.id === Number(id))) return alert('El Id de este personaje ya esta ingresado');
+  const onSearch = async (id) => {
+    if (!id) return alert('Ingrese Un Id Valido');
 
-    axios(`http://localhost:3001/rickandmorty/character/${id}`)
-      .then((response) => response.data)
-      .then((data) => {
-        if (data.name) {
-          setCharacters((oldChars) => [...oldChars, data]);
-        } else {
-          window.alert('¡Ingrese un ID!');
-        }
-      })
-      .catch((error) => alert("No existe un personaje con este ID"));
+    if (characters.some(chart => chart.id === Number(id))) {
+      return alert('El Id de este personaje ya esta ingresado');
+    }
+
+    try {
+      const { data } = await axios(`http://localhost:3001/rickandmorty/character/${id}`);
+        setCharacters((oldChars) => [...oldChars, data]);
+    }
+    catch (error) {
+      alert("No existe un personaje con este ID");
+    }
   }
-
 
   const onClose = (id) => {
     const charactersFilter = characters.filter((character) => character.id !== Number(id))
