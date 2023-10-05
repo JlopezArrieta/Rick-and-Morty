@@ -1,18 +1,20 @@
 .divContainer {
     width: 100vw;
     border: #57f70700 solid;
+    text-align: center;
 }
 
 .loginStyle {
-    background-color: #f209eabf;
+    background-color: #f209ea00;
     border-radius: 5px;
     color: #080808bf;
     font-size: large;
 }
 
 .container {
-    background-color: #68e9f7bf;
-    display: flex;
+    background-color: #f5f8f864;
+   
+    /* display: flex; */
     flex-direction: column;
     align-items: center;
     position: absolute;

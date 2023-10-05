@@ -27,7 +27,7 @@ function Form({ login }) {
     <div className={styles.divContainer}>
       <form className={styles.container} onSubmit={handleSubmit}>
         <h1 className={styles.loginStyle}>Login</h1>
-        <label>Email:</label>
+        <label>Email</label>
         <input
           type='text'
           id='email'
@@ -41,7 +41,7 @@ function Form({ login }) {
 
         <br />
 
-        <label>Password:</label>
+        <label>Password</label>
         <input
           type='password'
           id='password'

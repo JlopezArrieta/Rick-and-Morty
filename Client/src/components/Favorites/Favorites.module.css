@@ -4,52 +4,52 @@
 }
 
 .estiloAscendente {
-    background-color: rgb(244, 98, 242);
+    /* background-color: rgb(244, 98, 242); */
     border-radius: 2px;
     font-family: estilosdeletras;
-    border: 1.5px solid rgb(8, 117, 242);
+    /* border: 1.5px solid rgb(8, 117, 242); */
 }
 
 .estiloDescendente {
-    background-color: rgb(114, 245, 38);
+    /* background-color: rgb(114, 245, 38); */
     border-radius: 2px;
     font-family: estilosdeletras;
-    border: 1.5px solid rgb(189, 46, 38);
+    /* border: 1.5px solid rgb(189, 46, 38); */
 }
 
 .estiloMale {
-    background-color: rgb(38, 207, 245);
+    /* background-color: rgb(38, 207, 245); */
     border-radius: 2px;
     font-family: estilosdeletras;
-    border: 1.5px solid rgb(231, 249, 26);
+    /* border: 1.5px solid rgb(231, 249, 26); */
 }
 
 .estiloFemale {
-    background-color: rgb(245, 107, 38);
+    /* background-color: rgb(245, 107, 38); */
     border-radius: 2px;
     font-family: estilosdeletras;
-    border: 1.5px solid rgb(121, 189, 38);
+    /* border: 1.5px solid rgb(121, 189, 38); */
 }
 
 .estiloGenderless {
-    background-color: rgb(114, 245, 38);
+    /* background-color: rgb(114, 245, 38); */
     border-radius: 2px;
     font-family: estilosdeletras;
-    border: 1.5px solid rgb(38, 161, 189);
+    /* border: 1.5px solid rgb(38, 161, 189); */
 }
 
 .estilounknown {
-    background-color: rgb(242, 245, 38);
+    /* background-color: rgb(242, 245, 38); */
     border-radius: 2px;
     font-family: estilosdeletras;
-    border: 1.5px solid rgb(38, 189, 88);
+    /* border: 1.5px solid rgb(38, 189, 88); */
 }
 
 .estiloallcharactersFav {
-    background-color: rgb(245, 93, 38);
+    /* background-color: rgb(245, 93, 38); */
     border-radius: 2px;
     font-family: estilosdeletras;
-    border: 1.5px solid rgb(78, 38, 189);
+    /* border: 1.5px solid rgba(78, 38, 189, 0); */
 }
 
 .card {
