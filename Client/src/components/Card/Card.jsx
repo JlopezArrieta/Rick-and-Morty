@@ -4,7 +4,7 @@ import { addFav, removeFav } from "../../redux/actions";
 import { connect } from "react-redux";
 import { useState, useEffect } from "react";
 
-function Card({ id, name, species, gender, image, onClose, addFav, removeFav, myFavorites }) {
+function Card({ id, name, species, origin, status, gender, image, onClose, addFav, removeFav, myFavorites }) {
   //addFav, removeFav, myFavorites estan van en destructuracion por que son recibidas por props, 
   //por lo tanto al destructurar se agregan.
   const [isFav, setIsFav] = useState(false);
@@ -15,7 +15,7 @@ function Card({ id, name, species, gender, image, onClose, addFav, removeFav, my
       removeFav(id);
     } else {
       setIsFav(true);
-      addFav({ id, name, species, gender, image, onClose });
+      addFav({ id, name, species, gender, origin, status, image, onClose });
       console.log(isFav);
     }
   }

@@ -9,10 +9,8 @@ const postUser = async (req, res) => {
   try {
     const user = await User.findOrCreate({
       where: {
-        // email: email,
-        // password: password
-        email,
-        password
+        email: email,
+        password: password
       }
     })
     return res.status(201).json(user);

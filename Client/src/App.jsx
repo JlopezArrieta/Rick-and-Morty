@@ -22,8 +22,8 @@ function App() {
 
   const [access, setAccess] = useState(false);
 
-  const EMAIL = 'jalop123@gmail.com';
-  const PASSWORD = 'javier7';
+  // const EMAIL = 'jalop123@gmail.com';
+  // const PASSWORD = 'javier7';
 
   const navigate = useNavigate();
 

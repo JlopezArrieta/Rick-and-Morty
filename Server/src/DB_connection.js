@@ -38,5 +38,5 @@ module.exports = {
    User,
    Favorite,
    // ...sequelize.models,
-   conn: sequelize,
+   conn: sequelize
 };
